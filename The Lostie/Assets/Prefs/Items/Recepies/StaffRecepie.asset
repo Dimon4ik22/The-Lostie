@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a8054ccfb11e1049b6b92b8692c7d00, type: 3}
+  m_Name: StaffRecepie
+  m_EditorClassIdentifier: 
+  name: Staff
+  icon: {fileID: 21300000, guid: e5600378dd761e64d9423790c482bf36, type: 3}
+  result: {fileID: 11400000, guid: 88015a9b931f2a24ab8afde97e54e17a, type: 2}
+  ingredients:
+  - item: {fileID: 11400000, guid: 3f9e87c7f4e432f4daa25536f8563bb2, type: 2}
+    amount: 1
+  - item: {fileID: 11400000, guid: 06a042a728ed8fd4891105ea9e41dae3, type: 2}
+    amount: 1
