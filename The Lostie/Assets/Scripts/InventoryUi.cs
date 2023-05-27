@@ -13,7 +13,9 @@ public class InventoryUi : MonoBehaviour
 
     private List<ItemSlot> itemSlotList = new();
 
-    public GameObject itemSlotPrefab;
+    public GameObject inventorySlotPrefab;
+    public GameObject craftingSlotPrefab;
+
     public Transform inventoryItemTransform;
     public Transform craftingItemTransform;
 
@@ -46,7 +48,7 @@ public class InventoryUi : MonoBehaviour
 
         foreach (Item recipe in craftingRecipes)
         {
-            GameObject Go = Instantiate(itemSlotPrefab, craftingItemTransform);
+            GameObject Go = Instantiate(craftingSlotPrefab, craftingItemTransform);
             ItemSlot slot = Go.GetComponent<ItemSlot>();
             slot.AddItem(recipe);
         }
@@ -79,7 +81,7 @@ public class InventoryUi : MonoBehaviour
         int amount = currentItemCount - itemSlotList.Count;
         for (int i = 0; i < amount; ++i)
         {
-            GameObject GO = Instantiate(itemSlotPrefab, inventoryItemTransform);
+            GameObject GO = Instantiate(inventorySlotPrefab, inventoryItemTransform);
             ItemSlot newSlot = GO.GetComponent<ItemSlot>();
             itemSlotList.Add(newSlot);
         }

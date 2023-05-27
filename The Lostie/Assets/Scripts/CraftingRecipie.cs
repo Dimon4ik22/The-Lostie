@@ -47,8 +47,15 @@ public class CraftingRecipie : Item
         {
             Debug.Log("You dont have enaugh ingredients to craft: " + result.name);
         }
-
-
+    }
+    public override string GetItemDescription()
+    {
+        string itemIngridients = "";
+        foreach (Ingredient ingredient in ingredients)
+        {
+            itemIngridients += "- " + ingredient.amount + " " + ingredient.item.name + "\n";
+        }
+        return itemIngridients;
     }
 
     [System.Serializable]
